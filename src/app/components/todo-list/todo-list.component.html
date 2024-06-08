@@ -1,0 +1,106 @@
+<!-- <p>{{ str }}</p>
+
+<p>{{ obj.value }}</p>
+
+<div [innerHTML]="tpl"></div>
+<div>{{ tpl }}</div>
+
+<div [id]="id">AAAAA</div>
+
+<button (click)="submitHandler(id)">Click me</button>
+
+<input
+  type="text"
+  #name
+  (keyup.enter)="onKeyUp(name)"
+  placeholder="Enter your name ..."
+/>
+
+<input
+  type="text"
+  placeholder="Enter your email ..."
+  [(ngModel)]="email"
+  (keyup)="onEmailChange()"
+/> -->
+
+<!-- Structural Directive -->
+<!-- <div class="card" style="width: 18rem" *ngFor = 'let user of users; let i = index;'>
+  <div class="card-body">
+    <h5 class="card-title"> {{i + 1}}. {{user.name}} </h5>
+    <h6 class="card-subtitle mb-2 text-muted"> {{user.email}} </h6>
+    <p class="card-text"> {{user.website}} </p>
+  </div>
+</div> -->
+
+<!-- <div>
+  <p [class.completed]="todo.completed">
+    {{ todo.title }}
+    <i *ngIf='todo.completed' class="fas fa-check text-success"></i>
+  </p>
+  <p
+    [ngClass]="{ completed: todo.completed, 'text-completed': todo.completed }"
+    [ngStyle] = "{'font-weight': todo.completed ? 'bold' : ''}"
+  >
+    {{ todo.title }}
+    <i *ngIf="todo.completed" class="fas fa-check text-success"></i>
+  </p>
+</div>
+
+<div *ngIf="cardMode"> Card mode </div>
+<diList *ngIf="!cardMode"> List mode </div>
+
+<div *ngIf="cardMode; else listMode"> Card mode </div>
+<ng-template #listMode>
+  <div> List Mode </div>
+</ng-template>
+
+<div>
+  <ng-container *ngFor="let num of nums"> {{num}} </ng-container>
+</div>
+
+<button (click)="onLoad()"> Load </button>
+<ul>
+  <li *ngFor="let user of users; trackBy: trackUser"> {{user.name}} </li>
+</ul> -->
+
+<app-my-custom-modal>
+  <ng-container class="modal-header">Lorem ipsum dolor sit amet</ng-container>
+
+  <ng-container class="modal-body"
+    ><form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+        />
+
+        <small id="emailHelp" class="form-text text-muted"
+          >We'll never share your email with anyone else.</small
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </ng-container>
+</app-my-custom-modal>
